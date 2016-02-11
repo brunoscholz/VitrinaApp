@@ -10,7 +10,7 @@
             "fee": 0,
             "timestamp": 0,
             "recipientId": null,
-            "senderId": "9425224196345016949L",
+            "senderId": "9425224196345016949C",
             "senderPublicKey": "546d2b20000de58b037da0c0e18edd8885e1fbbb9ebf03e28ecdd4215aa44337",
             "asset": {
                 "delegates": {
