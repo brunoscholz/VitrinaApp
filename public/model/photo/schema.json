@@ -1,0 +1,46 @@
+{
+    "table": "asset_photos",
+    "alias": "ph",
+    "type": "table",
+    "tableFields": [
+        {
+            "name": "id",
+            "type": "String",
+            "length": 0
+        }
+        {
+            "name": "image",
+            "type": "String",
+            "length": 0
+        }
+        {
+            "name": "user",
+            "type": "String",
+            "length": 0
+        }
+        {
+            "name": "thumbnail",
+            "type": "String",
+            "length": 0
+        }
+        {
+            "name": "tags",
+            "type": "String",
+            "length": 0
+        }
+        {
+            "name": "transactionId",
+            "type": "String",
+            "length": 21
+        }
+    ]
+}
+
+{
+    "type": "left outer",
+    "table": "asset_photos",
+    "alias": "ph",
+    "on": {
+        "t.id": "ph.transactionId"
+    }
+}

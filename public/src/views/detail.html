@@ -1,0 +1,60 @@
+<div class="mdl-grid" style="max-width: 1200px;">
+  <div class="mdl-card amazing mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+    <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+      <h2 class="mdl-card__title-text">{{card.caption}}</h2>
+    </div>
+    
+    <div class="mdl-card__supporting-text">
+
+      <div class="mdl-grid">
+        <div class="mdl-cell" style="background: url('{{card.image}}') center center; height:600px; width:600px; display:flex; box-sizing: border-box; background-size: cover;"></div>
+
+        <div class="mdl-cell">
+          <h5>Posted by <a href="#profile/{{card.user}}">{{card.user}}</a></h5>
+          <h6 class="text-muted"><i class="material-icons">access_time</i> at 18h30, yesterday</h6>
+
+          <span class="hexTag" ng-repeat="tag in tags">
+            {{tag}}
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+      <div class="minilogo"></div>
+      <div>
+        <h5><i class="ion-heart text-danger"></i> {{card.likes}} likes</h5>
+        <span>2 days ago</span>
+      </div>
+    </div>
+    
+    <div class="mdl-card__actions mdl-card--border">
+      <h5 class="text-center"><i class="ion-chatbox-working text-primary"></i> Comments</h5>
+
+      <ul class="media-list">
+        <li ng-repeat="comment in photo.comments.data" class="media">
+          <a class="pull-left" href="http://instagram.com/{{comment.from.username}}">
+            <img class="media-object img-rounded" ng-src="{{comment.from.profile_picture}}">
+          </a>
+          <div class="media-body">
+            <a class="media-heading" href="http://instagram.com/{{comment.from.username}}">@{{comment.from.username}}</a>
+            {{comment.text}}
+          </div>
+        </li>
+        <li ng-if="!photo.comments.data.length">No comments</li>
+      </ul>
+
+      <hr class="soften">
+
+      <div class="btn-group">
+        <button class="btn" ng-class="{ 'btn-danger': hasLiked, 'btn-default': !hasLiked }" ng-click="like()">
+          <i class="ion-heart" ng-class="{ 'text-danger': !hasLiked}"></i>
+          <span ng-if="hasLiked">Liked</span>
+          <span ng-if="!hasLiked">Like</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
