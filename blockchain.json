@@ -99,6 +99,14 @@
 				"on": {
 					"t.id": "t_d.transactionId"
 				}
+			},
+			{
+				"type": "left outer",
+				"table": "asset_messages",
+				"alias": "tm",
+				"on": {
+					"t.id": "t_d.transactionId"
+				}
 			}
 		]
 	},
@@ -238,6 +246,32 @@
 				"name": "delegates",
 				"type": "Text",
 				"not_null": true
+			},
+			{
+				"name": "transactionId",
+				"type": "String",
+				"length": 21,
+				"not_null": true
+			}
+		],
+		"foreignKeys": [
+			{
+				"field": "transactionId",
+				"table": "transactions",
+				"table_field": "id",
+				"on_delete": "cascade"
+			}
+		]
+	},
+	{
+		"table": "asset_messages",
+		"alias": "tm",
+		"type": "table",
+		"tableFields": [
+			{
+				"name": "message",
+				"type": "String",
+				"length": 320
 			},
 			{
 				"name": "transactionId",
