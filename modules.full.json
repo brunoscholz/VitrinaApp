@@ -28,5 +28,10 @@
     "contracts/myasset": "./modules/contracts/myasset.js",
     "contracts/delegates": "./modules/contracts/delegates.js",
     "contracts/withdrawaltransfer": "./modules/contracts/withdrawaltransfer.js",
-    "contracts/Message": "./modules/contracts/Message.js"
+    "contracts/Message": "./modules/contracts/Message.js",
+    "contracts/Post": "./modules/contracts/Post.js",
+    "contracts/Like": "./modules/contracts/Like.js",
+    "contracts/Comment": "./modules/contracts/Comment.js",
+    "contracts/Profile": "./modules/contracts/Profile.js",
+    "contracts/Token": "./modules/contracts/Token.js"
 }
