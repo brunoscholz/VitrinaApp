@@ -1,23 +1,8 @@
 var looks = angular.module('VitrinaApp');
 
-/* Look creation */
-looks.controller('LookCreateController', ['$scope', '$rootScope', '$location', 'API',
-  function ($scope, $rootScope, $location, API) {
-    
-
-}]);
-
-/* Look edition */
-looks.controller('LookEditController', ['$scope', '$rootScope', '$location', 'API',
-  function ($scope, $rootScope, $location, API) {
-    
-
-}]);
-
 /* Look details */
 looks.controller('LookDetailController', ['$scope', '$rootScope', '$location', 'API',
   function ($scope, $rootScope, $location, API) {
-
     var mediaId = $location.path().split('/').pop();
 
     /*API.getMediaById(mediaId).then(function(media) {
@@ -87,6 +72,20 @@ looks.controller('LookDetailController', ['$scope', '$rootScope', '$location', '
     $scope.tip = function() {
       
     };
+}]);
+
+/* Look creation */
+looks.controller('LookCreateController', ['$scope', '$rootScope', '$location', 'API',
+  function ($scope, $rootScope, $location, API) {
+    $scope.title = "type the fucking title here...";
+
+}]);
+
+/* Look edition */
+looks.controller('LookEditController', ['$scope', '$rootScope', '$location', 'API',
+  function ($scope, $rootScope, $location, API) {
+    $scope.title = "type the fucking title here...";
+
 }]);
 
 /* Look delete */
