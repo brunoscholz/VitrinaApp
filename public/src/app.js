@@ -1,4 +1,4 @@
-angular.module('VitrinaApp', ['ngResource', 'ngMessages', 'ngRoute', 'ngAnimate'])
+angular.module('VitrinaApp', ['ngResource', 'ngMessages', 'ngRoute', 'ngAnimate', 'ngEmbed'])
   .config(function ($routeProvider, $locationProvider) {
     //$locationProvider.html5Mode(true);
 
@@ -18,6 +18,10 @@ angular.module('VitrinaApp', ['ngResource', 'ngMessages', 'ngRoute', 'ngAnimate'
       .when('/look/:id', {
         templateUrl: 'src/views/lookdetail.html',
         controller: 'LookDetailController'
+      })
+      .when('/look/create', {
+        templateUrl: 'src/views/lookcreate.html',
+        controller: 'LookCreateController'
       })
       .otherwise({
         redirectTo: '/'

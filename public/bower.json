@@ -24,7 +24,8 @@
     "angular-messages": "~1.4.8",
     "angular-resource": "~1.4.8",
     "angular-route": "~1.4.8",
-    "material-design-lite": "~1.1.1"
+    "material-design-lite": "~1.1.1",
+    "ngEmbed": "ng-embed#~2.0.3"
   },
   "resolutions": {
     "angular": "~1.4.8",

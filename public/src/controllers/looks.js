@@ -1,6 +1,21 @@
-var detail = angular.module('VitrinaApp');
+var looks = angular.module('VitrinaApp');
 
-detail.controller('LookDetailController', ['$scope', '$rootScope', '$location', 'API',
+/* Look creation */
+looks.controller('LookCreateController', ['$scope', '$rootScope', '$location', 'API',
+  function ($scope, $rootScope, $location, API) {
+    
+
+}]);
+
+/* Look edition */
+looks.controller('LookEditController', ['$scope', '$rootScope', '$location', 'API',
+  function ($scope, $rootScope, $location, API) {
+    
+
+}]);
+
+/* Look details */
+looks.controller('LookDetailController', ['$scope', '$rootScope', '$location', 'API',
   function ($scope, $rootScope, $location, API) {
 
     var mediaId = $location.path().split('/').pop();
@@ -72,6 +87,11 @@ detail.controller('LookDetailController', ['$scope', '$rootScope', '$location', 
     $scope.tip = function() {
       
     };
+}]);
 
+/* Look delete */
+looks.controller('LookDeleteController', ['$scope', '$rootScope', '$location', 'API',
+  function ($scope, $rootScope, $location, API) {
+    
 
 }]);
