@@ -45,9 +45,9 @@ detail.controller('LookDetailController', ['$scope', '$rootScope', '$location', 
         $scope.hasLiked = false;
       }
       
-      API.likeMedia(mediaId).error(function(data) {
+      /*API.likeMedia(mediaId).error(function(data) {
         alert('Error', data.message, 'error');
-      });
+      });*/
     };
 
     $scope.dislike = function() {
@@ -60,17 +60,17 @@ detail.controller('LookDetailController', ['$scope', '$rootScope', '$location', 
         $scope.hasNotLiked = false;
       }
 
-      API.likeMedia(mediaId).error(function(data) {
+      /*API.likeMedia(mediaId).error(function(data) {
         alert('Error', data.message, 'error');
-      });
+      });*/
     };
 
     $scope.share = function() {
-
+      
     };
 
     $scope.tip = function() {
-
+      
     };
 
 
