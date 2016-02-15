@@ -1,6 +1,6 @@
 var detail = angular.module('VitrinaApp');
 
-detail.controller('DetailController', ['$scope', '$rootScope', '$location', 'API',
+detail.controller('LookDetailController', ['$scope', '$rootScope', '$location', 'API',
   function ($scope, $rootScope, $location, API) {
 
     var mediaId = $location.path().split('/').pop();
@@ -29,14 +29,42 @@ detail.controller('DetailController', ['$scope', '$rootScope', '$location', 'API
       }
 
       $scope.hasLiked = false;//media.user_has_liked;
+      $scope.hasNotLiked = false;
+
       $scope.card = result;
       $scope.tags = JSON.parse(result.tags);
     });
 
     $scope.like = function() {
-      $scope.hasLiked = true;
+      if(!$scope.hasLiked) {
+        // didnt like yet or has disliked
+        $scope.hasLiked = true;
+        if($scope.hasNotLiked)
+          $scope.hasNotLiked = false;
+      } else {
+        $scope.hasLiked = false;
+      }
+      
       API.likeMedia(mediaId).error(function(data) {
         alert('Error', data.message, 'error');
       });
     };
+
+    $scope.dislike = function() {
+      if(!$scope.hasNotLiked) {
+        // didnt like yet or has disliked
+        $scope.hasNotLiked = true;
+        if($scope.hasLiked)
+          $scope.hasLiked = false;
+      } else {
+        $scope.hasNotLiked = false;
+      }
+
+      API.likeMedia(mediaId).error(function(data) {
+        alert('Error', data.message, 'error');
+      });
+    };
+
+
+
 }]);

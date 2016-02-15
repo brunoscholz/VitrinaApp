@@ -15,9 +15,9 @@ angular.module('VitrinaApp', ['ngResource', 'ngMessages', 'ngRoute', 'ngAnimate'
         templateUrl: 'src/views/signup.html',
         controller: 'SignupController'
       })
-      .when('/photo/:id', {
-        templateUrl: 'src/views/detail.html',
-        controller: 'DetailController'
+      .when('/look/:id', {
+        templateUrl: 'src/views/lookdetail.html',
+        controller: 'LookDetailController'
       })
       .otherwise({
         redirectTo: '/'

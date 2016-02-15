@@ -53,6 +53,12 @@
           <span ng-if="hasLiked">Liked</span>
           <span ng-if="!hasLiked">Like</span>
         </button>
+
+        <button class="btn" ng-class="{ 'btn-danger': hasNotLiked, 'btn-default': !hasNotLiked }" ng-click="dislike()">
+          <i class="ion-heart" ng-class="{ 'text-danger': !hasNotLiked}"></i>
+          <span ng-if="hasNotLiked">Disliked</span>
+          <span ng-if="!hasNotLiked">Dislike</span>
+        </button>
       </div>
 
     </div>
