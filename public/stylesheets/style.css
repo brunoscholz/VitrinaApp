@@ -756,7 +756,7 @@ body .vitrina-container {
 }
 .message-wrapper.me .text-wrapper:before {
   border-width: 10px 10px 0 0;
-  border-color: #ffffff transparent transparent transparent;
+  border-color: #FF5722 transparent transparent transparent;
   position: absolute;
   top: 0;
   right: -9px;

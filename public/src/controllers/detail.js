@@ -65,6 +65,13 @@ detail.controller('LookDetailController', ['$scope', '$rootScope', '$location', 
       });
     };
 
+    $scope.share = function() {
+
+    };
+
+    $scope.tip = function() {
+
+    };
 
 
 }]);
