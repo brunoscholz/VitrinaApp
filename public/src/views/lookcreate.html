@@ -21,17 +21,17 @@
       <div class="mdl-card__supporting-text">
 
         <div id="dropzone" style="border: 1px solid #000;">
-          <p>Drop file here!</p>
-          <img id="look-canvas" src="{{look}}">
+          <canvas id="look-canvas" width="500" height="500"></canvas>
+          <!--<img id="" data-ng-src="{{ look.url }}" height="{{ look.height }}" width="{{ look.width }}" >-->
         </div>
 
         <div id="filterContainer">
           <ul id="filters">
-            <li> <a href="#" id="normal">Normal</a> </li>
-            <li> <a href="#" id="vintage">Vintage</a> </li>
-            <li> <a href="#" id="lomo">Lomo</a> </li>
-            <li> <a href="#" id="clarity">Clarity</a> </li>
-            <li> <a href="#" id="sinCity">Sin City</a> </li>
+            <li> <button id="normal"  ng-click="ApplyFilter('normal')">Normal</button> </li>
+            <li> <button id="vintage" ng-click="ApplyFilter('vintage')">Vintage</button> </li>
+            <li> <button id="lomo"    ng-click="ApplyFilter('lomo')">Lomo</button> </li>
+            <li> <button id="clarity" ng-click="ApplyFilter('clarity')">Clarity</button> </li>
+            <li> <button id="sinCity" ng-click="ApplyFilter('sinCity')">Sin City</button> </li>
           </ul>
         </div>
 
