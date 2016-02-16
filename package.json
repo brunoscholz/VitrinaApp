@@ -1,13 +1,13 @@
 {
-	"name": "lisk-dapps-sdk",
+	"name": "VitrinaApp",
 	"version": "1.0.0",
-	"description": "Official SDK for the Lisk decentralized application platform",
-	"repository": "git@github.com:LiskHQ/lisk-dapps-sdk.git",
-	"main": "index.js",
+	"description": "Official vitrina dev",
+	"repository": "git@github.com:brunoscholz/VitrinaApp.git",
+	"main": "server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "Boris Povod <boris@crypti.me>,Pavel Nekrasov <landgraf.paul@gmail.com>",
+	"author": "Bruno Scholz",
 	"license": "MIT",
 	"dependencies": {
 		"async": "*",

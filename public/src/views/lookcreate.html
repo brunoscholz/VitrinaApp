@@ -1,55 +1,85 @@
 <div class="mdl-grid" style="max-width: 1200px;">
   <div class="mdl-card amazing mdl-cell mdl-cell--12-col mdl-shadow--4dp">
-    <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-      <h2 class="mdl-card__title-text">{{title}}</h2>
-    </div>
     
-    <div class="mdl-card__supporting-text">
+    <form id='file-form' method="post" enctype="multipart/form-data">
+      <input type="hidden" name="extra-data" multiple />
 
-      <div class="mdl-grid">
-        <div class="mdl-cell" ></div>
-
-        <div class="mdl-cell">
-          <h5>Posted by <a href="#profile/"></a></h5>
-          <h6 class="text-muted"><i class="material-icons">access_time</i> at 18h30, yesterday</h6>
-
-          
+      <div class="mdl-card__title mdl-color-text--white">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3" value="{{title}}">
+          <label class="mdl-textfield__label" for="sample3">Caption</label>
         </div>
       </div>
+      
+      <input id="file-input" type="file" file-model="myFile" accept="image/*">
+      <!--
+      <input type="file" id="file-input" name="file-input" multiple />
+      <input type="file" file="files" accept="image/*" multiple>
+      -->
+      <button ng-click="readFile()">upload me</button>
 
-    </div>
+      <div class="mdl-card__supporting-text">
 
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-      <div class="minilogo"></div>
-      <div>
-        <h5><i class="ion-heart text-danger"></i>  likes</h5>
-        <span>2 days ago</span>
+        <div id="dropzone" style="border: 1px solid #000;">
+          <p>Drop file here!</p>
+          <img id="look-canvas" src="{{look}}">
+        </div>
+
+        <div id="filterContainer">
+          <ul id="filters">
+            <li> <a href="#" id="normal">Normal</a> </li>
+            <li> <a href="#" id="vintage">Vintage</a> </li>
+            <li> <a href="#" id="lomo">Lomo</a> </li>
+            <li> <a href="#" id="clarity">Clarity</a> </li>
+            <li> <a href="#" id="sinCity">Sin City</a> </li>
+          </ul>
+        </div>
+
+        <div class="mdl-grid">
+          <div class="mdl-cell" ></div>
+
+          <div class="mdl-cell">
+            <h5>Posted by <a href="#profile/"></a></h5>
+            <h6 class="text-muted"><i class="material-icons">access_time</i> at 18h30, yesterday</h6>
+
+            
+          </div>
+        </div>
+
       </div>
-    </div>
-    
-    <div class="mdl-card__actions mdl-card--border">
-      <h5 class="text-center"><i class="ion-chatbox-working text-primary"></i> Comments</h5>
 
-      <ul class="media-list">
-        
-      </ul>
+      <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+        <div class="minilogo"></div>
+        <div>
+          <h5><i class="ion-heart text-danger"></i>  likes</h5>
+          <span>2 days ago</span>
+        </div>
+      </div>
+      
+      <div class="mdl-card__actions mdl-card--border">
+        <h5 class="text-center"><i class="ion-chatbox-working text-primary"></i> Comments</h5>
 
-      <hr class="soften">
-
-      <div class="btn-group">
-        <button id="share-menu" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ng-click="publish()">
-          <span>Publish</span>
-        </button>
-
-        <button id="promote-menu" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ng-click="promote()">
-          <span>Promote</span>
-        </button>
-        <ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="promote-menu">
-          <li class="mdl-menu__item">10 VITs - 2nd layer</li>
-          <li class="mdl-menu__item">50 Vits - 3rd layer</li>
+        <ul class="media-list">
+          
         </ul>
 
+        <hr class="soften">
+
+        <div class="btn-group">
+          <button id="share-menu" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ng-click="publish()">
+            <span>Publish</span>
+          </button>
+
+          <button id="promote-menu" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ng-click="promote()">
+            <span>Promote</span>
+          </button>
+          <ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="promote-menu">
+            <li class="mdl-menu__item">10 VITs - 2nd layer</li>
+            <li class="mdl-menu__item">50 Vits - 3rd layer</li>
+          </ul>
+
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>

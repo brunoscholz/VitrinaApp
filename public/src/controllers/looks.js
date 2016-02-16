@@ -13,7 +13,7 @@ looks.controller('LookDetailController', ['$scope', '$rootScope', '$location', '
     // not acceptable... should come right from server!
     // when in production it should come right
     API.getFeed().success(function(data) {
-      var result;
+      var result = {};
       var index;
       var entry;
       var searchEntry = "id";
@@ -75,17 +75,50 @@ looks.controller('LookDetailController', ['$scope', '$rootScope', '$location', '
 }]);
 
 /* Look creation */
-looks.controller('LookCreateController', ['$scope', '$rootScope', '$location', 'API',
-  function ($scope, $rootScope, $location, API) {
-    $scope.title = "type the fucking title here...";
+looks.controller('LookCreateController', ['$scope', '$rootScope', '$location', 'API', 'twFileReader',
+  function ($scope, $rootScope, $location, API, twFileReader) {
+    $scope.title = "";
+    $scope.look;
+    $scope.myFile = {};
 
+    $scope.readFile = function() {
+      var file = $scope.myFile;
+         
+      //console.log('file is ' );
+      //console.dir(file);
+
+      //var uploadUrl = "/fileUpload";
+      //fileUpload.uploadFileToUrl(file, uploadUrl);
+      twFileReader.readAsDataURL(file).then(function(dataURL) {
+        //do something with dataURL
+        $scope.look = dataURL;
+
+        //Caman = require('caman').Caman;
+        Caman($scope.look, function () {
+          this.brightness(40);
+          this.vignette('10%');
+          this.render(function() {
+
+          });
+        });
+
+      });
+
+    };
+
+    $scope.previewPost = function() {
+      console.log('preview');
+    };
+
+    $scope.post = function() {
+      console.log('post/file ready');
+    };
 }]);
 
 /* Look edition */
 looks.controller('LookEditController', ['$scope', '$rootScope', '$location', 'API',
   function ($scope, $rootScope, $location, API) {
     $scope.title = "type the fucking title here...";
-
 }]);
 
 /* Look delete */
