@@ -17,15 +17,13 @@ InsideTransfer.prototype.inheritance = function(){
 InsideTransfer.prototype.create = function (data, trs) {
 	trs.recipientId = data.recipientId;
 	trs.amount = data.amount;
-	trs.token = data.token || trs.token;
 
 	return trs;
 }
 
 InsideTransfer.prototype.calculateFee = function (trs) {
-	return 0;
-	/*var fee = parseInt(trs.amount / 100 * 0.1);
-	return fee || (1 * constants.fixedPoint);*/
+	var fee = parseInt(trs.amount / 100 * 0.1);
+	return fee || (1 * constants.fixedPoint);
 }
 
 InsideTransfer.prototype.verify = function (trs, sender, cb, scope) {
@@ -38,13 +36,6 @@ InsideTransfer.prototype.verify = function (trs, sender, cb, scope) {
 		return cb("TRANSACTIONS.INVALID_AMOUNT");
 	}
 
-	if (trs.token != "LISK") {
-		var tokenId = modules.contracts.token.findToken(trs.token);
-		if (!tokenId) {
-			return cb("Token doesn't exist");
-		}
-	}
-
 	cb(null, trs);
 }
 
@@ -55,42 +46,21 @@ InsideTransfer.prototype.getBytes = function (trs) {
 InsideTransfer.prototype.apply = function (trs, sender, cb, scope) {
 	var amount = trs.amount + trs.fee;
 
-	if (trs.token == "LISK") {
-		if (sender.balance[trs.token] < amount) {
-			return setImmediate(cb, "Balance has no LISK: " + trs.id);
-		}
-	} else {
-		if (sender.balance[trs.token] < trs.amount) {
-			return setImmediate(cb, "Balance has no " + trs.token + ": " + trs.id);
-		}
-		if (sender.balance["LISK"] < trs.fee) {
-			return setImmediate(cb, "Balance has no LISK: " + trs.id);
-		}
+	if (sender.balance < amount) {
+		return setImmediate(cb, "Account has no LISK: " + trs.id);
 	}
 
 	async.series([
 		function (cb) {
 			modules.blockchain.accounts.mergeAccountAndGet({
 				address: sender.address,
-				balance: {"LISK":-trs.fee}
+				balance: -amount
 			}, cb, scope);
 		},
 		function (cb) {
-			var token = {};
-			token[trs.token] = -trs.amount;
-
-			modules.blockchain.accounts.mergeAccountAndGet({
-				address: sender.address,
-				balance: token
-			}, cb, scope);
-		},
-		function (cb) {
-			var token = {};
-			token[trs.token] = trs.amount;
-
 			modules.blockchain.accounts.mergeAccountAndGet({
 				address: trs.recipientId,
-				balance: token
+				balance: trs.amount
 			}, cb, scope);
 		}
 	], cb);
@@ -103,25 +73,13 @@ InsideTransfer.prototype.undo = function (trs, sender, cb, scope) {
 		function (cb) {
 			modules.blockchain.accounts.undoMerging({
 				address: sender.address,
-				balance: {"LISK": -trs.fee}
+				balance: -amount
 			}, cb, scope);
 		},
 		function (cb) {
-			var token = {};
-			token[trs.token] = -trs.amount;
-		
-			modules.blockchain.accounts.undoMerging({
-				address: sender.address,
-				balance: token
-			}, cb, scope);
-		},
-		function (cb) {
-			var token = {};
-			token[trs.token] = trs.amount;
-		
 			modules.blockchain.accounts.undoMerging({
 				address: trs.recipientId,
-				balance: token
+				balance: trs.amount
 			}, cb, scope);
 		}
 	], cb);
@@ -130,42 +88,21 @@ InsideTransfer.prototype.undo = function (trs, sender, cb, scope) {
 InsideTransfer.prototype.applyUnconfirmed = function (trs, sender, cb, scope) {
 	var amount = trs.amount + trs.fee;
 
-	if (trs.token == "LISK") {
-		if (sender.balance[trs.token] < amount) {
-			return setImmediate(cb, "Balance has no LISK: " + trs.id);
-		}
-	} else {
-		if (sender.balance[trs.token] < trs.amount) {
-			return setImmediate(cb, "Balance has no " + trs.token + ": " + trs.id);
-		}
-		if (sender.balance["LISK"] < trs.fee) {
-			return setImmediate(cb, "Balance has no LISK: " + trs.id);
-		}
+	if (sender.u_balance < amount) {
+		return setImmediate(cb, 'Account has no balance: ' + trs.id);
 	}
 
 	async.series([
 		function (cb) {
 			modules.blockchain.accounts.mergeAccountAndGet({
 				address: sender.address,
-				balance: {"LISK": -trs.fee}
+				u_balance: -amount
 			}, cb, scope);
 		},
 		function (cb) {
-			var token = {};
-			token[trs.token] = -trs.amount;
-
-			modules.blockchain.accounts.mergeAccountAndGet({
-				address: sender.address,
-				balance: token
-			}, cb, scope);
-		},
-		function (cb) {
-			var token = {};
-			token[trs.token] = trs.amount;
-
 			modules.blockchain.accounts.mergeAccountAndGet({
 				address: trs.recipientId,
-				balance: token
+				u_balance: trs.amount
 			}, cb, scope);
 		}
 	], cb);
@@ -178,25 +115,13 @@ InsideTransfer.prototype.undoUnconfirmed = function (trs, sender, cb, scope) {
 		function (cb) {
 			modules.blockchain.accounts.undoMerging({
 				address: sender.address,
-				balance: {"LISK": -trs.fee}
+				u_balance: -amount
 			}, cb, scope);
 		},
 		function (cb) {
-			var token = {};
-			token[trs.token] = -trs.amount;
-		
-			modules.blockchain.accounts.undoMerging({
-				address: sender.address,
-				balance: token
-			}, cb, scope);
-		},
-		function (cb) {
-			var token = {};
-			token[trs.token] = trs.amount;
-		
 			modules.blockchain.accounts.undoMerging({
 				address: trs.recipientId,
-				balance: token
+				u_balance: trs.amount
 			}, cb, scope);
 		}
 	], cb);
