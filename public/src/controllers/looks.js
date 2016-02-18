@@ -75,8 +75,8 @@ looks.controller('LookDetailController', ['$scope', '$rootScope', '$location', '
 }]);
 
 /* Look creation */
-looks.controller('LookCreateController', ['$scope', '$rootScope', '$location', 'API', 'twFileReader',
-  function ($scope, $rootScope, $location, API, twFileReader) {
+looks.controller('LookCreateController', ['$scope', '$rootScope', '$location', 'twFileReader',
+  function ($scope, $rootScope, $location, twFileReader) {
     $scope.title = "";
     $scope.look = {
       'url': '',
@@ -84,6 +84,15 @@ looks.controller('LookCreateController', ['$scope', '$rootScope', '$location', '
       'height': 0
     };
     $scope.myFile = {};
+    $scope.tags = {};
+
+    $scope.addTag = function (tag) {
+
+    }
+    
+    $scope.removeTag = function (tag) {
+      
+    }
 
     var maxWidth = 500,
         maxHeight = 500,

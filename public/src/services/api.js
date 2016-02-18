@@ -6,6 +6,12 @@ angular.module('VitrinaApp')
         //return $http.get('http://localhost:3000/api/feed');
         return $http.get('model/feed.json')
       },
+      getTags: function() {
+        return $http.get('model/tags.json')
+      },
+      getTagCategories: function() {
+        return $http.get('model/tagcategories.json')
+      },
       getMediaById: function(id) {
         return $http.get('model/feed.json')
           .then(function(obj) {

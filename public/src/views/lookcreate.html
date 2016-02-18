@@ -30,40 +30,32 @@
             <li> <button id="normal"  ng-click="ApplyFilter('normal')">Normal</button> </li>
             <li> <button id="vintage" ng-click="ApplyFilter('vintage')">Vintage</button> </li>
             <li> <button id="lomo"    ng-click="ApplyFilter('lomo')">Lomo</button> </li>
-            <li> <button id="clarity" ng-click="ApplyFilter('clarity')">Clarity</button> </li>
-            <li> <button id="sinCity" ng-click="ApplyFilter('sinCity')">Sin City</button> </li>
+            <li> <button id="gotham" ng-click="ApplyFilter('gotham')">Gotham</button> </li>
+            <li> <button id="sinCity" ng-click="ApplyFilter('mySinCity')">Sin City</button> </li>
+            <li> <button id="test1" ng-click="ApplyFilter('test1')">Test 1</button> </li>
+            <li> <button id="test2" ng-click="ApplyFilter('test2')">Test 2</button> </li>
           </ul>
         </div>
 
         <div class="mdl-grid">
-          <div class="mdl-cell" ></div>
-
-          <div class="mdl-cell">
-            <h5>Posted by <a href="#profile/"></a></h5>
-            <h6 class="text-muted"><i class="material-icons">access_time</i> at 18h30, yesterday</h6>
+          <div class="mdl-cell"></div>
+          <div class="mdl-cell" style="border:1px solid #000; width:500px; height:500px;">
 
             
+    
           </div>
         </div>
 
       </div>
 
       <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <div class="minilogo"></div>
-        <div>
-          <h5><i class="ion-heart text-danger"></i>  likes</h5>
-          <span>2 days ago</span>
-        </div>
+        <div class="">Tags</div>
+        <ul class="tag-list">
+          
+        </ul>
       </div>
       
       <div class="mdl-card__actions mdl-card--border">
-        <h5 class="text-center"><i class="ion-chatbox-working text-primary"></i> Comments</h5>
-
-        <ul class="media-list">
-          
-        </ul>
-
-        <hr class="soften">
 
         <div class="btn-group">
           <button id="share-menu" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ng-click="publish()">
@@ -83,3 +75,6 @@
     </form>
   </div>
 </div>
+<div ng-controller="TagController">
+                <tags family="tags"></tags>
+            </div>

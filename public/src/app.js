@@ -1,6 +1,7 @@
 angular.module('VitrinaApp', ['ngResource', 'ngMessages', 'ngRoute', 'ngAnimate', 'ngEmbed', 'tw.services.fileReader'])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, $logProvider) {
     //$locationProvider.html5Mode(true);
+    $logProvider.debugEnabled(true);
 
     $routeProvider
       .when('/', {
