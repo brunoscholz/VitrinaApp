@@ -103,9 +103,17 @@
 			{
 				"type": "left outer",
 				"table": "asset_messages",
-				"alias": "tm",
+				"alias": "msg",
 				"on": {
-					"t.id": "tm.transactionId"
+					"t.id": "msg.transactionId"
+				}
+			},
+			{
+				"type": "left outer",
+				"table": "asset_token",
+				"alias": "tkn",
+				"on": {
+					"t.id": "tkn.transactionId"
 				}
 			}
 		]
@@ -171,6 +179,17 @@
 				"type": "String",
 				"length": 21,
 				"not_null": true
+			},
+			{
+				"name": "relationshipId",
+				"type": "String",
+				"length": 21,
+				"not_null": true
+			},
+			{
+				"name": "token",
+				"type": "String",
+				"length": 21
 			}
 		],
 		"foreignKeys": [
@@ -179,6 +198,26 @@
 				"table": "blocks",
 				"table_field": "id",
 				"on_delete": "cascade"
+			},
+			{
+				"field": "relationshipId",
+				"table": "relationship",
+				"table_field": "id",
+			}
+		]
+	},
+	{
+		"table": "relationship",
+		"alias": "r",
+		"type": "table",
+		"tableFields": [
+			{
+				"name": "id",
+				"type": "String",
+				"length": 21,
+				"not_null": true,
+				"unique": true,
+				"primary_key": true
 			}
 		]
 	},
@@ -262,5 +301,73 @@
 				"on_delete": "cascade"
 			}
 		]
+	},
+	{
+		"table": "asset_messages",
+		"alias": "msg",
+		"type": "table",
+		"tableFields": [
+			{
+				"name": "message",
+				"type": "String",
+				"length": 320
+			},
+			{
+				"name": "transactionId",
+				"type": "String",
+				"length": 21,
+				"not_null": true
+			}
+		],
+		"foreignKeys": [
+			{
+				"field": "transactionId",
+				"table": "transactions",
+				"table_field": "id",
+				"on_delete": "cascade"
+			}
+		]
+<<<<<<< HEAD
 	}
 ]
+=======
+	},
+	{
+		"table": "asset_token",
+		"alias": "tkn",
+		"type": "table",
+		"tableFields": [
+			{
+				"name": "name",
+				"type": "String",
+				"length": 16,
+				"not_null": true
+			},
+			{
+				"name": "description",
+				"type": "Text",
+				"not_null": true
+			},
+			{
+				"name": "fund",
+				"type": "BigInt",
+				"not_null": true
+			},
+			{
+				"name": "transactionId",
+				"type": "String",
+				"length": 21,
+				"not_null": true
+			}
+		],
+		"foreignKeys": [
+			{
+				"field": "transactionId",
+				"table": "transactions",
+				"table_field": "id",
+				"on_delete": "cascade"
+			}
+		]
+	}
+]
+>>>>>>> e421c2de498ce03c6d7e6c5ff26b7a9030b05ba3

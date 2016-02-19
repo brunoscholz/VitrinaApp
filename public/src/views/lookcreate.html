@@ -1,0 +1,80 @@
+<div class="mdl-grid" style="max-width: 1200px;">
+  <div class="mdl-card amazing mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+    
+    <form id='file-form' method="post" enctype="multipart/form-data">
+      <input type="hidden" name="extra-data" multiple />
+
+      <div class="mdl-card__title mdl-color-text--white">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3" value="{{title}}">
+          <label class="mdl-textfield__label" for="sample3">Caption</label>
+        </div>
+      </div>
+      
+      <input id="file-input" type="file" file-model="myFile" accept="image/*">
+      <!--
+      <input type="file" id="file-input" name="file-input" multiple />
+      <input type="file" file="files" accept="image/*" multiple>
+      -->
+      <button ng-click="readFile()">upload me</button>
+
+      <div class="mdl-card__supporting-text">
+
+        <div id="dropzone" style="border: 1px solid #000;">
+          <canvas id="look-canvas" width="500" height="500"></canvas>
+          <!--<img id="" data-ng-src="{{ look.url }}" height="{{ look.height }}" width="{{ look.width }}" >-->
+        </div>
+
+        <div id="filterContainer">
+          <ul id="filters">
+            <li> <button id="normal"  ng-click="ApplyFilter('normal')">Normal</button> </li>
+            <li> <button id="vintage" ng-click="ApplyFilter('vintage')">Vintage</button> </li>
+            <li> <button id="lomo"    ng-click="ApplyFilter('lomo')">Lomo</button> </li>
+            <li> <button id="gotham" ng-click="ApplyFilter('gotham')">Gotham</button> </li>
+            <li> <button id="sinCity" ng-click="ApplyFilter('mySinCity')">Sin City</button> </li>
+            <li> <button id="test1" ng-click="ApplyFilter('test1')">Test 1</button> </li>
+            <li> <button id="test2" ng-click="ApplyFilter('test2')">Test 2</button> </li>
+          </ul>
+        </div>
+
+        <div class="mdl-grid">
+          <div class="mdl-cell"></div>
+          <div class="mdl-cell" style="border:1px solid #000; width:500px; height:500px;">
+
+            
+    
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+        <div class="">Tags</div>
+        <ul class="tag-list">
+          
+        </ul>
+      </div>
+      
+      <div class="mdl-card__actions mdl-card--border">
+
+        <div class="btn-group">
+          <button id="share-menu" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ng-click="publish()">
+            <span>Publish</span>
+          </button>
+
+          <button id="promote-menu" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ng-click="promote()">
+            <span>Promote</span>
+          </button>
+          <ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="promote-menu">
+            <li class="mdl-menu__item">10 VITs - 2nd layer</li>
+            <li class="mdl-menu__item">50 Vits - 3rd layer</li>
+          </ul>
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div ng-controller="TagController">
+                <tags family="tags"></tags>
+            </div>

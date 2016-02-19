@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+.idea/
+
+<<<<<<< HEAD
+public/generalStuff.txt
+=======
+public/stuff.txt
+testserver.js
+>>>>>>> e421c2de498ce03c6d7e6c5ff26b7a9030b05ba3

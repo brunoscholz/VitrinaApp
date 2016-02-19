@@ -1,0 +1,260 @@
+[
+  {
+    "termCategoryId": 1,
+    "termId": 1,
+    "category": "Body",
+    "description": "",
+    "parent": null
+  },
+  {
+    "termCategoryId": 2,
+    "termId": 2,
+    "category": "Head",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 3,
+    "termId": 3,
+    "category": "Feet",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 4,
+    "termId": 4,
+    "category": "Hands",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 5,
+    "termId": 5,
+    "category": "Torso",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 6,
+    "termId": 6,
+    "category": "Legs",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 7,
+    "termId": 7,
+    "category": "Underwear",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 8,
+    "termId": 25,
+    "category": "Hair",
+    "description": "",
+    "parent": 2
+  },{
+    "termCategoryId": 9,
+    "termId": 26,
+    "category": "Cap",
+    "description": "",
+    "parent": 2
+  },
+  {
+    "termCategoryId": 10,
+    "termId": 27,
+    "category": "Glasses",
+    "description": "",
+    "parent": 2
+  },
+  {
+    "termCategoryId": 11,
+    "termId": 28,
+    "category": "Makeup",
+    "description": "",
+    "parent": 2
+  },
+  {
+    "termCategoryId": 12,
+    "termId": 29,
+    "category": "Neck",
+    "description": "",
+    "parent": 2
+  },
+  {
+    "termCategoryId": 13,
+    "termId": 30,
+    "category": "Ears",
+    "description": "",
+    "parent": 2
+  },
+  {
+    "termCategoryId": 14,
+    "termId": 31,
+    "category": "Shoes",
+    "description": "",
+    "parent": 3
+  },
+  {
+    "termCategoryId": 15,
+    "termId": 32,
+    "category": "Socks",
+    "description": "",
+    "parent": 3
+  },
+  {
+    "termCategoryId": 16,
+    "termId": 33,
+    "category": "Sandals",
+    "description": "",
+    "parent": 3
+  },
+  {
+    "termCategoryId": 17,
+    "termId": 34,
+    "category": "Wristbands",
+    "description": "",
+    "parent": 4
+  },
+  {
+    "termCategoryId": 18,
+    "termId": 35,
+    "category": "Rings",
+    "description": "",
+    "parent": 4
+  },
+  {
+    "termCategoryId": 19,
+    "termId": 36,
+    "category": "Gloves",
+    "description": "",
+    "parent": 4
+  },
+  {
+    "termCategoryId": 20,
+    "termId": 37,
+    "category": "Mittens",
+    "description": "",
+    "parent": 4
+  },
+  {
+    "termCategoryId": 21,
+    "termId": 8,
+    "category": "Dresses",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 22,
+    "termId": 9,
+    "category": "Suit",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 23,
+    "termId": 10,
+    "category": "Tunic",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 24,
+    "termId": 11,
+    "category": "Coats",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 25,
+    "termId": 12,
+    "category": "Pea Coats",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 26,
+    "termId": 13,
+    "category": "Trench Coat",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 27,
+    "termId": 14,
+    "category": "Parkas",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 28,
+    "termId": 15,
+    "category": "Poncho",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 29,
+    "termId": 16,
+    "category": "Pajamas",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 30,
+    "termId": 17,
+    "category": "Coveralls",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 31,
+    "termId": 18,
+    "category": "Jumpsuits",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 32,
+    "termId": 19,
+    "category": "Rompers",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 33,
+    "termId": 20,
+    "category": "Swimwear",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 34,
+    "termId": 21,
+    "category": "Sweaters",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 35,
+    "termId": 22,
+    "category": "Belts",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 36,
+    "termId": 23,
+    "category": "Body type",
+    "description": "",
+    "parent": 1
+  },
+  {
+    "termCategoryId": 37,
+    "termId": 24,
+    "category": "Body size",
+    "description": "",
+    "parent": 1
+  }
+]

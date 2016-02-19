@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="stylesheets/material/material.css">
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.cyan-light_blue.min.css" />
   <!--<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-amber.min.css" />-->
+  <link rel="stylesheet" href="bower_components/ngEmbed/dist/ng-embed.min.css"/>
 
   <link rel="stylesheet" href="stylesheets/style.css">
 
@@ -167,29 +168,106 @@
 
     </main>
 
+    <!-- begin DIALOG MODAL -->
+
+      <button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>
+      <dialog class="mdl-dialog">
+        <h4 class="mdl-dialog__title">Allow data collection?</h4>
+        <div class="mdl-dialog__content">
+          <p>
+            Allowing us to collect data will let us get you the information you want faster.
+          <p>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button">Agree</button>
+          <button type="button" class="mdl-button close">Disagree</button>
+        </div>
+      </dialog>
+      <script>
+        var dialog = document.querySelector('dialog');
+        var showDialogButton = document.querySelector('#show-dialog');
+        if (! dialog.showModal) {
+          dialogPolyfill.registerDialog(dialog);
+        }
+        showDialogButton.addEventListener('click', function() {
+          dialog.showModal();
+        });
+        dialog.querySelector('.close').addEventListener('click', function() {
+          dialog.close();
+        });
+      </script>
+
+    <!-- end DIALOG MODAL -->
+    <!-- begin SNACKBAR -->
+
+      <button id="demo-show-snackbar" class="mdl-button mdl-js-button mdl-button--raised" type="button">Show Snackbar</button>
+      <div id="demo-snackbar-example" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button class="mdl-snackbar__action" type="button"></button>
+      </div>
+      <script>
+      (function() {
+        'use strict';
+        var snackbarContainer = document.querySelector('#demo-snackbar-example');
+        var showSnackbarButton = document.querySelector('#demo-show-snackbar');
+        var handler = function(event) {
+          showSnackbarButton.style.backgroundColor = '';
+        };
+        showSnackbarButton.addEventListener('click', function() {
+          'use strict';
+          showSnackbarButton.style.backgroundColor = '#' +
+              Math.floor(Math.random() * 0xFFFFFF).toString(16);
+          var data = {
+            message: 'Button color changed.',
+            timeout: 2000,
+            actionHandler: handler,
+            actionText: 'Undo'
+          };
+          snackbarContainer.MaterialSnackbar.showSnackbar(data);
+        });
+      }());
+      </script>
+
+    <!-- end SNACKBAR -->
+
     <div class="mdl-layout__obfuscator"></div>
 
   </div>
 
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-messages/angular-messages.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="vendor/material.min.js"></script>
+  <script src="bower_components/caman/dist/caman.full.min.js"></script>
+  <script src="src/filters.js"></script>
+  <script src="bower_components/ngEmbed/dist/ng-embed.min.js"></script>
+  <script src="src/linq.min.js"></script>
 
   <script src="src/app.js"></script>
 
   <script src="src/factories/idFactory.js"></script>
+
+  <script src="src/services/api.js"></script>
+  <script src="src/services/fileUpload.js"></script>
+  <script src="src/services/authService.js"></script>
+  <script src="src/services/userService.js"></script>
+  <script src="src/services/tags.js"></script>
+
+  <script src="src/directives/fileModel.js"></script>
+  <script src="bower_components/angular-file-reader/angular-file-reader.js"></script>
+  <script src="bower_components/angular-file-reader/filereader.js"></script>
   
   <script src="src/controllers/feed.js"></script>
   <script src="src/controllers/login.js"></script>
   <script src="src/controllers/signup.js"></script>
   <script src="src/controllers/navbar.js"></script>
-  <script src="src/controllers/detail.js"></script>
+
+  <script src="src/controllers/looks.js"></script>
   <script src="src/controllers/chat.js"></script>
 
-  <script src="src/services/api.js"></script>
 
   <script>
     angular.module('VitrinaApp')
@@ -198,6 +276,15 @@
       $scope.messages = '99';
     });
   </script>
+
+<script type="text/javascript">
+  Caman.DEBUG = ('console' in window);
+
+  // Caman("#test-canvas", "../images/test1_640.jpg", function () {
+  //   this.sunrise();
+  //   this.render();
+  // });
+</script>
 
 </body>
 </html>

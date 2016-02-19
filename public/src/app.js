@@ -1,6 +1,7 @@
-angular.module('VitrinaApp', ['ngResource', 'ngMessages', 'ngRoute', 'ngAnimate'])
-  .config(function ($routeProvider, $locationProvider) {
+angular.module('VitrinaApp', ['ngResource', 'ngMessages', 'ngRoute', 'ngAnimate', 'ngEmbed', 'tw.services.fileReader'])
+  .config(function ($routeProvider, $locationProvider, $logProvider) {
     //$locationProvider.html5Mode(true);
+    $logProvider.debugEnabled(true);
 
     $routeProvider
       .when('/', {
@@ -15,9 +16,17 @@ angular.module('VitrinaApp', ['ngResource', 'ngMessages', 'ngRoute', 'ngAnimate'
         templateUrl: 'src/views/signup.html',
         controller: 'SignupController'
       })
-      .when('/photo/:id', {
-        templateUrl: 'src/views/detail.html',
-        controller: 'DetailController'
+      .when('/look/create', {
+        templateUrl: 'src/views/lookcreate.html',
+        controller: 'LookCreateController'
+      })
+      .when('/look/view/:id', {
+        templateUrl: 'src/views/lookdetail.html',
+        controller: 'LookDetailController'
+      })
+      .when('/look/edit/:id', {
+        templateUrl: 'src/views/lookedit.html',
+        controller: 'LookEditController'
       })
       .otherwise({
         redirectTo: '/'
