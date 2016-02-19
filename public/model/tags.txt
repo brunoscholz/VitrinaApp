@@ -242,3 +242,70 @@ Gothic fashion is a clothing style influenced by Goth subculture. This style is 
 <input type="button" value="Show text" onclick="document.getElementById('p1').style.visibility='visible'">
 
 eval("var func = function (a, b) { return a + b; };");
+
+
+// for each category
+            // verify parent
+            //  if null insert
+            //  else check if parent exists insert
+            //    else insert into check later?
+
+          for(var tm in termData) {
+            add(tm, null);
+          }
+
+            var newNode = {id: termData[tx].termId, category: termCategoryId, name: taxData[tx].category, children: []};
+            var nodes = Enumerable.From(termData)
+                .Where("$.termCategoryId = " + taxData[tx].termCategoryId)
+                //.OrderBy("$.user.screen_name")
+                //.Select("$.user.screen_name + ':' + $.text")
+                .ToArray();
+
+              // if not the category itself
+              if(nodes[tm].termId != taxData[tx].termId) {
+
+              }
+
+              var newNode = {id: termData[tx].termId, category: termCategoryId, name: taxData[tx].category, children: []};
+              var newNode = {id: taxData[tx].termCategoryId, name: taxData[tx].category, children: []};
+
+              if(terms[tm].termCategoryId == taxData[tx].termCategoryId) {
+
+                newNode.children.push({id: terms[tm].termId, name:terms[tm].name, children: []});
+              }
+
+              ret.children.push(newNode);
+            }
+          }
+
+
+add(tm, null);
+
+var ret = {id: 0, name:"Tags", children:[]};
+ret.children.push(newNode);
+
+$categories = get_terms('my_taxonomy_name', array('hide_empty' => false));
+$categoryHierarchy = array();
+sort_terms_hierarchicaly($categories, $categoryHierarchy);
+var_dump($categoryHierarchy);
+
+{
+  "termid": 1,
+  "termCategoryId": 1,
+  "name": "Body",
+  "slug": "body"
+},
+{
+  "termid": 2,
+  "termCategoryId": 1,
+  "name": "Head",
+  "slug": "head"
+},
+
+{
+  "termCategoryId": 1,
+  "termId": 1,
+  "category": "Body",
+  "description": "",
+  "parent": null
+},

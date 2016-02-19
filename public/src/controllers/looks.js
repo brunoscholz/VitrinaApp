@@ -86,12 +86,12 @@ looks.controller('LookCreateController', ['$scope', '$rootScope', '$location', '
     $scope.myFile = {};
     $scope.tags = {};
 
-    $scope.addTag = function (tag) {
-
+    $scope.addTag = function (item, bin) {
+      alert('Item ' + item + ' has been dropped into ' + bin);
     }
     
-    $scope.removeTag = function (tag) {
-      
+    $scope.removeTag = function (item, bin) {
+
     }
 
     var maxWidth = 500,
