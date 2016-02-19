@@ -364,5 +364,38 @@
 				"on_delete": "cascade"
 			}
 		]
+	},
+	{
+		"table": "asset_terms",
+		"alias": "term",
+		"type": "table",
+		"tableFields": [
+			{
+				"name": "id",
+				"type": "BigInt",
+				"autoincrement": true
+
+			},
+			{
+				"name": "termCategoryId",
+				"type": "BigInt",
+				"autoincrement": true
+
+			},
+			{
+				"name": "transactionId",
+				"type": "String",
+				"length": 21,
+				"not_null": true
+			}
+		],
+		"foreignKeys": [
+			{
+				"field": "transactionId",
+				"table": "transactions",
+				"table_field": "id",
+				"on_delete": "cascade"
+			}
+		]
 	}
 ]

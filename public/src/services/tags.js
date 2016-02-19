@@ -46,47 +46,37 @@ app.service('TAG', ['$http', 'API',
     //simply returns the tags list
     this.list = function (callback) {
       return API.getTags().success(function(termData) {
-        //var terms = data;
-        return API.getTagCategories().success(function(taxData) {
-          // mount the tree
-          var ret = {id: 0, name:"Tags", children:[]};
+        tags = termData;
+        var ret = {id: 0, name:"Tags", children:[]};
+        var firstNodes = Enumerable.From(termData)
+            .Where(function (x) { return x.parent == 0 })
+            .OrderByDescending(function (x) { return x.termId })
+            //.Select(function (x) { return x.user.screen_name + ':' + x.text })
+            .ToArray();
 
-          // for each taxonomy find terms and add bellow it
-          for(var tx in taxData) {
-            var newNode = {name: taxData[tx].category, children: []}
-            for(var tm in termData) {
-              if(termData[tm].termCategoryId == taxData[tx].termCategoryId) {
-                //console.log(terms[tm].name);
-                newNode.children.push({name:termData[tm].name, children: []});
-              }
-            }
+        console.log(firstNodes);
+        add(ret, firstNodes);
+        console.log(ret);
 
-            ret.children.push(newNode);
-          }
-
-          callback(ret);
-        });
+        callback(ret);
       });
     }
 
-    //add node to parent
-    function add (nodes, parentId) {
-      var ret = [];
+    function add(ret, nodes) {
       for(var n in nodes) {
-        if(nodes[n].parent == parentId) {
-          ret[nodes[n].termId] = n;
-          nodes.splice(n, 1);
-        }
-      }
+        // find all children
+        //console.log(tags.length);
+        var allNodes = Enumerable.From(tags)
+            .Where(function (x) { return x.parent == nodes[n].termid })
+            .OrderBy(function (x) { return x.termId })
+            //.Select(function (x) { return x.user.screen_name + ':' + x.text })
+            .ToArray();
 
-      for(var child in ret) {
-        ret[child].children = [];
-        return add(nodes, ret.termId);
+        var newNode = {name: nodes[n].name, children: []}
+        add(newNode, allNodes);
+        ret.children.push(newNode);
       }
-
-      return ret;
     }
-
 }]);
 
 app.controller('TagController', ['$scope', 'TAG',

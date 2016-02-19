@@ -1,596 +1,702 @@
 [
   {
+    "termid": 100,
+    "name": "Styles",
+    "slug": "styles",
+    "description":"styles for fashion",
+    "parent": 0
+  },
+  {
     "termid": 1,
-    "termCategoryId": 1,
     "name": "Body",
-    "slug": "body"
+    "slug": "body",
+    "description":"",
+    "parent": 0
   },
   {
     "termid": 2,
-    "termCategoryId": 1,
     "name": "Head",
-    "slug": "head"
+    "slug": "head",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 3,
-    "termCategoryId": 1,
     "name": "Feet",
-    "slug": "feet"
+    "slug": "feet",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 4,
-    "termCategoryId": 1,
     "name": "Hands",
-    "slug": "hands"
+    "slug": "hands",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 5,
-    "termCategoryId": 1,
     "name": "Torso",
-    "slug": "torso"
+    "slug": "torso",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 6,
-    "termCategoryId": 1,
     "name": "Legs",
-    "slug": "legs"
+    "slug": "legs",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 7,
-    "termCategoryId": 1,
     "name": "Underwear",
-    "slug": "underwear"
+    "slug": "underwear",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 8,
-    "termCategoryId": 1,
     "name": "Dresses",
-    "slug": "dresses"
+    "slug": "dresses",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 9,
-    "termCategoryId": 1,
     "name": "Suit",
-    "slug": "suit"
+    "slug": "suit",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 10,
-    "termCategoryId": 1,
     "name": "Tunic",
-    "slug": "tunic"
+    "slug": "tunic",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 11,
-    "termCategoryId": 1,
     "name": "Coats",
-    "slug": "coats"
+    "slug": "coats",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 12,
-    "termCategoryId": 1,
     "name": "Pea Coats",
-    "slug": "pea-coats"
+    "slug": "pea-coats",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 13,
-    "termCategoryId": 1,
     "name": "Trench Coat",
-    "slug": "trench-coat"
+    "slug": "trench-coat",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 14,
-    "termCategoryId": 1,
     "name": "Parkas",
-    "slug": "parkas"
+    "slug": "parkas",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 15,
-    "termCategoryId": 1,
     "name": "Poncho",
-    "slug": "poncho"
+    "slug": "poncho",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 16,
-    "termCategoryId": 1,
     "name": "Pajamas",
-    "slug": "pajamas"
+    "slug": "pajamas",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 17,
-    "termCategoryId": 1,
     "name": "Coveralls",
-    "slug": "coveralls"
+    "slug": "coveralls",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 18,
-    "termCategoryId": 1,
     "name": "Jumpsuits",
-    "slug": "jumpsuits"
+    "slug": "jumpsuits",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 19,
-    "termCategoryId": 1,
     "name": "Rompers",
-    "slug": "rompers"
+    "slug": "rompers",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 20,
-    "termCategoryId": 1,
     "name": "Swimwear",
-    "slug": "swimwear"
+    "slug": "swimwear",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 21,
-    "termCategoryId": 1,
     "name": "Sweaters",
-    "slug": "sweaters"
+    "slug": "sweaters",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 22,
-    "termCategoryId": 1,
     "name": "Belts",
-    "slug": "belts"
+    "slug": "belts",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 23,
-    "termCategoryId": 1,
     "name": "Body type",
-    "slug": "body-type"
+    "slug": "body-type",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 24,
-    "termCategoryId": 1,
     "name": "Body size",
-    "slug": "body-size"
+    "slug": "body-size",
+    "description":"",
+    "parent": 1
   },
   {
     "termid": 25,
-    "termCategoryId": 2,
     "name": "Hair",
-    "slug": "hair"
+    "slug": "hair",
+    "description":"",
+    "parent": 2
   },
   {
     "termid": 26,
-    "termCategoryId": 2,
     "name": "Cap",
-    "slug": "cap"
+    "slug": "cap",
+    "description":"",
+    "parent": 2
   },
   {
     "termid": 27,
-    "termCategoryId": 2,
     "name": "Glasses",
-    "slug": "glasses"
+    "slug": "glasses",
+    "description":"",
+    "parent": 2
   },
   {
     "termid": 28,
-    "termCategoryId": 2,
     "name": "Makeup",
-    "slug": "makeup"
+    "slug": "makeup",
+    "description":"",
+    "parent": 2
   },
   {
     "termid": 29,
-    "termCategoryId": 2,
     "name": "Neck",
-    "slug": "neck"
+    "slug": "neck",
+    "description":"",
+    "parent": 2
   },
   {
     "termid": 30,
-    "termCategoryId": 2,
     "name": "Ears",
-    "slug": "ears"
+    "slug": "ears",
+    "description":"",
+    "parent": 2
   },
   {
     "termid": 31,
-    "termCategoryId": 3,
     "name": "Shoes",
-    "slug": "shoes"
+    "slug": "shoes",
+    "description":"",
+    "parent": 3
   },
   {
     "termid": 32,
-    "termCategoryId": 3,
     "name": "Socks",
-    "slug": "socks"
+    "slug": "socks",
+    "description":"",
+    "parent": 3
   },
   {
     "termid": 33,
-    "termCategoryId": 3,
     "name": "Sandals",
-    "slug": "sandals"
+    "slug": "sandals",
+    "description":"",
+    "parent": 3
   },
   {
     "termid": 34,
-    "termCategoryId": 4,
     "name": "Wristbands",
-    "slug": "wristbands"
+    "slug": "wristbands",
+    "description":"",
+    "parent": 4
   },
   {
     "termid": 35,
-    "termCategoryId": 4,
     "name": "Rings",
-    "slug": "rings"
+    "slug": "rings",
+    "description":"",
+    "parent": 4
   },
   {
     "termid": 36,
-    "termCategoryId": 4,
     "name": "Gloves",
-    "slug": "gloves"
+    "slug": "gloves",
+    "description":"",
+    "parent": 4
   },
   {
     "termid": 37,
-    "termCategoryId": 4,
     "name": "Mittens",
-    "slug": "mittens"
+    "slug": "mittens",
+    "description":"",
+    "parent": 4
   },
   {
     "termid": 38,
-    "termCategoryId": 8,
     "name": "Tomahawk",
-    "slug": "tomahawk"
+    "slug": "tomahawk",
+    "description":"",
+    "parent": 25
   },
   {
     "termid": 39,
-    "termCategoryId": 9,
     "name": "Hoodies",
-    "slug": "hoodies"
+    "slug": "hoodies",
+    "description":"",
+    "parent": 26
   },
   {
     "termid": 40,
-    "termCategoryId": 9,
     "name": "Berets",
-    "slug": "berets"
+    "slug": "berets",
+    "description":"",
+    "parent": 26
   },
   {
     "termid": 41,
-    "termCategoryId": 9,
     "name": "Balaclavas",
-    "slug": "balaclavas"
+    "slug": "balaclavas",
+    "description":"",
+    "parent": 26
   },
   {
     "termid": 42,
-    "termCategoryId": 9,
     "name": "Bands",
-    "slug": "bands"
+    "slug": "bands",
+    "description":"",
+    "parent": 26
   },
   {
     "termid": 43,
-    "termCategoryId": 9,
     "name": "Newsboy Caps",
-    "slug": "newsboy-caps"
+    "slug": "newsboy-caps",
+    "description":"",
+    "parent": 26
   },
   {
     "termid": 44,
-    "termCategoryId": 11,
     "name": "Eyes",
-    "slug": "eyes"
+    "slug": "eyes",
+    "description":"",
+    "parent": 28
   },
   {
     "termid": 45,
-    "termCategoryId": 11,
     "name": "Lips",
-    "slug": "lips"
+    "slug": "lips",
+    "description":"",
+    "parent": 28
   },
   {
     "termid": 46,
-    "termCategoryId": 11,
     "name": "Skin",
-    "slug": "skin"
+    "slug": "skin",
+    "description":"",
+    "parent": 28
   },
   {
     "termid": 47,
-    "termCategoryId": 12,
     "name": "Necklace",
-    "slug": "necklace"
+    "slug": "necklace",
+    "description":"",
+    "parent": 29
   },
   {
     "termid": 48,
-    "termCategoryId": 12,
     "name": "Scarves",
-    "slug": "scarves"
+    "slug": "scarves",
+    "description":"",
+    "parent": 29
   },
   {
     "termid": 49,
-    "termCategoryId": 12,
     "name": "Ties",
-    "slug": "ties"
+    "slug": "ties",
+    "description":"",
+    "parent": 29
   },
   {
     "termid": 50,
-    "termCategoryId": 12,
     "name": "Bow Ties",
-    "slug": "bow-ties"
+    "slug": "bow-ties",
+    "description":"",
+    "parent": 29
   },
   {
     "termid": 51,
-    "termCategoryId": 13,
     "name": "Earrings",
-    "slug": "earrings"
+    "slug": "earrings",
+    "description":"",
+    "parent": 30
   },
   {
     "termid": 52,
-    "termCategoryId": 15,
     "name": "Knee High Socks",
-    "slug": "knee-high-socks"
+    "slug": "knee-high-socks",
+    "description":"",
+    "parent": 32
   },
   {
     "termid": 53,
-    "termCategoryId": 15,
     "name": "Mid Calf Socks",
-    "slug": "mid-calf-socks"
+    "slug": "mid-calf-socks",
+    "description":"",
+    "parent": 32
   },
   {
     "termid": 54,
-    "termCategoryId": 15,
     "name": "Over Knee Socks",
-    "slug": "over-knee-socks"
+    "slug": "over-knee-socks",
+    "description":"",
+    "parent": 32
   },
   {
     "termid": 55,
-    "termCategoryId": 15,
     "name": "Ped Socks",
-    "slug": "ped-socks"
+    "slug": "ped-socks",
+    "description":"",
+    "parent": 32
   },
   {
     "termid": 56,
-    "termCategoryId": 15,
     "name": "Thigh High Socks",
-    "slug": "thigh-high-socks"
+    "slug": "thigh-high-socks",
+    "description":"",
+    "parent": 32
   },
   {
     "termid": 57,
-    "termCategoryId": 15,
     "name": "Argyle Socks",
-    "slug": "argyle-socks"
+    "slug": "argyle-socks",
+    "description":"",
+    "parent": 32
   },
   {
     "termid": 58,
-    "termCategoryId": 15,
     "name": "Pantyhose",
-    "slug": "pantyhose"
+    "slug": "pantyhose",
+    "description":"",
+    "parent": 32
   },
   {
     "termid": 59,
-    "termCategoryId": 5,
     "name": "Shirts",
-    "slug": "shirts"
+    "slug": "shirts",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 60,
-    "termCategoryId": 5,
     "name": "T-shirts",
-    "slug": "t-shirts"
+    "slug": "t-shirts",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 61,
-    "termCategoryId": 5,
     "name": "Jackets",
-    "slug": "jackets"
+    "slug": "jackets",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 62,
-    "termCategoryId": 5,
     "name": "Denim Jackets",
-    "slug": "denim-jackets"
+    "slug": "denim-jackets",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 63,
-    "termCategoryId": 5,
     "name": "Puffy Jackets",
-    "slug": "puffy-jackets"
+    "slug": "puffy-jackets",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 64,
-    "termCategoryId": 5,
     "name": "Cardigans",
-    "slug": "cardigans"
+    "slug": "cardigans",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 65,
-    "termCategoryId": 5,
     "name": "Camis",
-    "slug": "camis"
+    "slug": "camis",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 66,
-    "termCategoryId": 5,
     "name": "Blazers",
-    "slug": "blazers"
+    "slug": "blazers",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 67,
-    "termCategoryId": 5,
     "name": "Blouses",
-    "slug": "blouses"
+    "slug": "blouses",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 68,
-    "termCategoryId": 5,
     "name": "Jerseys",
-    "slug": "jerseys"
+    "slug": "jerseys",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 69,
-    "termCategoryId": 5,
     "name": "Long Sleeve Shirts",
-    "slug": "long-sleeve-shirts"
+    "slug": "long-sleeve-shirts",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 70,
-    "termCategoryId": 5,
     "name": "Short Sleeve Shirts",
-    "slug": "short-sleeve-shirts"
+    "slug": "short-sleeve-shirts",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 71,
-    "termCategoryId": 5,
     "name": "Button Down Shirts",
-    "slug": "button-down-shirts"
+    "slug": "button-down-shirts",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 72,
-    "termCategoryId": 5,
     "name": "Polo Shirts",
-    "slug": "polo-shirts"
+    "slug": "polo-shirts",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 73,
-    "termCategoryId": 5,
     "name": "Vests",
-    "slug": "vests"
+    "slug": "vests",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 74,
-    "termCategoryId": 5,
     "name": "Turtleneck",
-    "slug": "turtleneck"
+    "slug": "turtleneck",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 75,
-    "termCategoryId": 5,
     "name": "Tie Dye Shirts",
-    "slug": "tie-dye-shirts"
+    "slug": "tie-dye-shirts",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 76,
-    "termCategoryId": 5,
     "name": "Sleeveless",
-    "slug": "sleeveless"
+    "slug": "sleeveless",
+    "description":"",
+    "parent": 5
   },
   {
     "termid": 77,
-    "termCategoryId": 6,
     "name": "Pants",
-    "slug": "pants"
+    "slug": "pants",
+    "description":"",
+    "parent": 6
   },
   {
     "termid": 78,
-    "termCategoryId": 6,
     "name": "Jeans",
-    "slug": "jeans"
+    "slug": "jeans",
+    "description":"",
+    "parent": 6
   },
   {
     "termid": 79,
-    "termCategoryId": 6,
     "name": "Capris",
-    "slug": "capris"
+    "slug": "capris",
+    "description":"",
+    "parent": 6
   },
   {
     "termid": 80,
-    "termCategoryId": 6,
     "name": "Shorts",
-    "slug": "shorts"
+    "slug": "shorts",
+    "description":"",
+    "parent": 6
   },
   {
     "termid": 81,
-    "termCategoryId": 6,
     "name": "Leggings",
-    "slug": "leggings"
+    "slug": "leggings",
+    "description":"",
+    "parent": 6
   },
   {
     "termid": 82,
-    "termCategoryId": 6,
     "name": "Flare Pants",
-    "slug": "flare-pants"
+    "slug": "flare-pants",
+    "description":"",
+    "parent": 6
   },
   {
     "termid": 83,
-    "termCategoryId": 6,
     "name": "Skirts",
-    "slug": "skirts"
+    "slug": "skirts",
+    "description":"",
+    "parent": 6
   },
   {
     "termid": 84,
-    "termCategoryId": 6,
     "name": "Skorts",
-    "slug": "skorts"
+    "slug": "skorts",
+    "description":"",
+    "parent": 6
   },
   {
     "termid": 85,
-    "termCategoryId": 7,
     "name": "Bras",
-    "slug": "bras"
+    "slug": "bras",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 86,
-    "termCategoryId": 7,
     "name": "Panties",
-    "slug": "panties"
+    "slug": "panties",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 87,
-    "termCategoryId": 7,
     "name": "Boxers",
-    "slug": "boxers"
+    "slug": "boxers",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 88,
-    "termCategoryId": 7,
     "name": "Briefs",
-    "slug": "briefs"
+    "slug": "briefs",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 89,
-    "termCategoryId": 7,
     "name": "Long Underwear",
-    "slug": "long-underwear"
+    "slug": "long-underwear",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 90,
-    "termCategoryId": 7,
     "name": "Nightgowns",
-    "slug": "nightgowns"
+    "slug": "nightgowns",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 91,
-    "termCategoryId": 7,
     "name": "Padded Bras",
-    "slug": "padded-bras"
+    "slug": "padded-bras",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 92,
-    "termCategoryId": 7,
     "name": "Shapewear",
-    "slug": "shapewear"
+    "slug": "shapewear",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 93,
-    "termCategoryId": 7,
     "name": "Rash Guards",
-    "slug": "rash-guards"
+    "slug": "rash-guards",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 94,
-    "termCategoryId": 7,
     "name": "Push Up Bras",
-    "slug": "push-up-bras"
+    "slug": "push-up-bras",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 95,
-    "termCategoryId": 7,
     "name": "Robes",
-    "slug": "robes"
+    "slug": "robes",
+    "description":"",
+    "parent": 7
   },
   {
     "termid": 96,
-    "termCategoryId": 33,
     "name": "Bikinis",
-    "slug": "bikinis"
+    "slug": "bikinis",
+    "description":"",
+    "parent": 20
   },
   {
     "termid": 97,
-    "termCategoryId": 33,
     "name": "Tankinis",
-    "slug": "tankinis"
+    "slug": "tankinis",
+    "description":"",
+    "parent": 20
   },
   {
     "termid": 98,
-    "termCategoryId": 33,
     "name": "String Bikinis",
-    "slug": "string-bikinis"
+    "slug": "string-bikinis",
+    "description":"",
+    "parent": 20
   },
   {
     "termid": 99,
-    "termCategoryId": 37,
     "name": "Plus size",
-    "slug": "plus-size"
+    "slug": "plus-size",
+    "description":"",
+    "parent": 24
   }
 ]
