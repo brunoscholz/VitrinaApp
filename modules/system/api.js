@@ -3,14 +3,6 @@ var private = {}, self = null,
 private.apies = {};
 private.loaded = false;
 
-var responseHeaders = {  
-    "access-control-allow-origin": "*",
-    "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
-    "access-control-allow-headers": "content-type, accept",
-    "access-control-max-age": 10,
-    "Content-Type": "application/json"
-};
-
 function Api(cb, _library) {
 	self = this;
 	library = _library;
@@ -48,15 +40,11 @@ Api.prototype.onBlockchainLoaded = function () {
 
 	library.sandbox.onMessage(function (message, cb, callback_id) {
 		var handler = private.apies[message.method + " " + message.path];
-		library.logger(handler);
 		if (handler) {
 			handler(function (err, response) {
 				if (err) {
 					err = err.toString();
 				}
-
-				library.logger(response);
-
 
 				cb(err, {response: response}, callback_id);
 			}, message.query);
